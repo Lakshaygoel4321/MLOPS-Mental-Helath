@@ -1,0 +1,40 @@
+columns:
+  - User_ID: int
+  - Age: int
+  - Gender: category
+  - Social_Media_Hours: float
+  - Exercise_Hours: float
+  - Sleep_Hours: float
+  - Screen_Time_Hours: float
+  - Survey_Stress_Score: int
+  - Wearable_Stress_Score: float
+  - Support_System: category
+  - Academic_Performance: category
+
+
+numerical_columns:
+  - User_ID
+  - Age
+  - Social_Media_Hours
+  - Exercise_Hours
+  - Sleep_Hours
+  - Screen_Time_Hours
+  - Survey_Stress_Score
+  - Wearable_Stress_Score
+
+
+categorical_columns:
+  - Gender
+  - Support_System
+  - Academic_Performance
+
+drop_columns:
+  - User_ID
+  
+
+oh_columns:
+  - Gender
+  - Academic_Performance
+
+
+
