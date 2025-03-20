@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress Level Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Stress Level Prediction</a>
+        </div>
+    </nav>
+    
+    <div class="container mt-4">
+        <div class="card shadow p-4">
+            <h2 class="text-center">Predict Your Stress Level</h2>
+            <form action="/" method="post">
+                <div class="row">
+                    <div class="mb-3">
+                        <label for="Age">Age</label>
+                        <input type="number" class="form-control" id="Age" name="Age" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="Gender">Gender</label>
+                        <select class="form-control" id="Gender" name="Gender" required>
+                            <option value="" disabled selected>Select Gender</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Social_Media_Hours">Social Media Hours</label>
+                        <input type="number" class="form-control" id="Social_Media_Hours" name="Social_Media_Hours" required>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="mb-3">
+                        <label for="Exercise_Hours">Exercise Hours</label>
+                        <input type="number" class="form-control" id="Exercise_Hours" name="Exercise_Hours" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Sleep_Hours">Sleep Hours</label>
+                        <input type="number" class="form-control" id="Sleep_Hours" name="Sleep_Hours" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Screen_Time_Hours">Screen Time Hours</label>
+                        <input type="number" class="form-control" id="Screen_Time_Hours" name="Screen_Time_Hours" required>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="mb-3">
+                        <label for="Survey_Stress_Score">Survey Stress Score</label>
+                        <input type="number" class="form-control" id="Survey_Stress_Score" name="Survey_Stress_Score" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Wearable_Stress_Score">Wearable Stress Score</label>
+                        <input type="number" class="form-control" id="Wearable_Stress_Score" name="Wearable_Stress_Score" required>
+                    </div>
+                </div>
+                
+
+                    <div class="mb-3">
+                        <label for="Academic_Performance">Academic Performance</label>
+                        <select class="form-control" id="Academic_Performance" name="Academic_Performance" required>
+                            <option value="" disabled selected>Select Performance</option>
+                            <option>Excellent</option>
+                            <option>Good</option>
+                            <option>Average</option>
+                            <option>Poor</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary px-5">Predict Stress Level</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="container mt-4 text-center">
+        <div class="alert {% if context == 'Moderate' %}alert-warning{% elif context == 'High' %}alert-danger{% else %}alert-success{% endif %}" role="alert">
+            <h4 class="fw-bold">Stress Level: {{ context }}</h4>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
