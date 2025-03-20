@@ -1,12 +1,12 @@
-Student Mental Health Analysis
+# Student Mental Health Analysis
 
 Project Overview
 
 This project focuses on analyzing student mental health and stress levels. It involves data ingestion, validation, transformation, and model training, along with a web application for local deployment. The project utilizes MongoDB for database management and follows a structured pipeline for processing and analysis.
 
-Project Workflow
+# Project Workflow
 
-1. Setting Up the Project
+## 1. Setting Up the Project
 
 Run template.py to create the project template.
 
@@ -16,7 +16,7 @@ Create a virtual environment and install dependencies:
 
 Verify installed packages:
 
-2. MongoDB Setup
+## 2. MongoDB Setup
 
 Sign up on MongoDB Atlas and create a project.
 
@@ -34,7 +34,7 @@ Load and push the dataset to MongoDB from the notebook.
 
 Verify the data in MongoDB Atlas under "Browse Collections."
 
-3. Logging, Exception Handling, and Notebooks
+## 3. Logging, Exception Handling, and Notebooks
 
 Implement logging in logger.py and test with demo.py.
 
@@ -42,7 +42,7 @@ Implement exception handling in exception.py and test with demo.py.
 
 Perform EDA and Feature Engineering.
 
-4. Data Ingestion
+## 4. Data Ingestion
 
 Define connection variables in constants.__init__.py.
 
@@ -58,7 +58,7 @@ Develop data_ingestion.py for data loading.
 
 Run demo.py after setting up the MongoDB URL:
 
-5. Data Validation, Transformation & Model Training
+## 5. Data Validation, Transformation & Model Training
 
 Implement utilities in utils.main_utils.py.
 
@@ -72,13 +72,13 @@ Data Transformation component (estimator.py in entity folder).
 
 Model Training component (estimator.py in entity folder).
 
-6. Model Evaluation & Model Pusher
+## 6. Model Evaluation & Model Pusher
 
 Implement model evaluation to assess performance.
 
 Push the trained model to the local environment.
 
-7. Web Application Setup
+## 7. Web Application Setup
 
 Create a templates and static folder.
 
@@ -94,7 +94,7 @@ Cloud deployment using CI/CD.
 
 Integration with additional mental health datasets.
 
-Conclusion
+## Conclusion
 
 This project provides insights into student mental health trends and offers a structured approach to data processing and model training for predictive analysis. The application is currently available for local use and can be extended for broader deployment in the future.
 
